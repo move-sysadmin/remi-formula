@@ -11,18 +11,18 @@
     'rpm': 'http://rpms.remirepo.net/enterprise/remi-release-6.rpm',
   },
   '7': {
-    'key': 'http://rpms.famillecollet.com/RPM-GPG-KEY-remi',
+    'key': 'https://rpms.remirepo.net/enterprise/7/RPM-GPG-KEY-remi',
     'key_hash': 'md5=3abb4e5a7b1408c888e19f718c012630',
     'rpm': 'http://rpms.remirepo.net/enterprise/remi-release-7.rpm',
   },
   '8': {
-    'key': 'http://rpms.famillecollet.com/RPM-GPG-KEY-remi',
-    'key_hash': 'md5=3abb4e5a7b1408c888e19f718c012630',
+    'key': 'https://rpms.remirepo.net/enterprise/8/RPM-GPG-KEY-remi',
+    'key_hash': 'md5=ed85c36d74acdfaea575631dfb208f7f',
     'rpm': 'http://rpms.remirepo.net/enterprise/remi-release-8.rpm',
   },
   '9': {
-    'key': 'http://rpms.famillecollet.com/RPM-GPG-KEY-remi',
-    'key_hash': 'md5=3abb4e5a7b1408c888e19f718c012630',
+    'key': 'https://rpms.remirepo.net/enterprise/9/RPM-GPG-KEY-remi',
+    'key_hash': 'md5=3c6ccaf27b94d199f6530f41b6cc5ab8',
     'rpm': 'http://rpms.remirepo.net/enterprise/remi-release-9.rpm',
   },
 }, 'osmajorrelease') %}
