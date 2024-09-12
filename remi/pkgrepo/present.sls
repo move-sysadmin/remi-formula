@@ -36,8 +36,11 @@ install_remi_pubkey:
     - source: {{ remi_settings.pubkey|default(pkg.key) }}
     - source_hash:  {{ remi_settings.pubkey_hash|default(pkg.key_hash) }}
 
+{# No longer include EPEL where it is broken #}
+{%- if salt['grains.get']('osmajorrelease') > 7 %}
 include:
     - epel
+{%- endif %}
 
 install_remi_rpm:
   pkg.installed:
@@ -45,7 +48,9 @@ install_remi_rpm:
       - remi-release: {{ remi_settings.rpm|default(pkg.rpm) }}
     - require:
       - file: install_remi_pubkey
+{%- if salt['grains.get']('osmajorrelease') > 7 %}
       - pkg: epel_release
+{%- endif %}
 
 {% if 'repo' in remi_settings %}
 {% for repo, config in remi_settings.repo.items() %}
